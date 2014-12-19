@@ -8,14 +8,17 @@
 makeCacheMatrix <- function(p_matrix = matrix()) {
     v_inverse_matrix <- NULL
 
+    # Gets the input matrix
     get_matrix <- function() {
         return(p_matrix)
     }
 
+    # Gets the inverse matrix
     get_inverse_matrix <- function() {
         return (v_inverse_matrix)
     }
 
+    # Caches the inverse matrix to avoid duplicated calculation
     set_inverse_matrix <- function(p_inverse_matrix) {
         v_inverse_matrix <<- p_inverse_matrix
     }
@@ -25,7 +28,6 @@ makeCacheMatrix <- function(p_matrix = matrix()) {
          get_inverse_matrix=get_inverse_matrix,
          set_inverse_matrix=set_inverse_matrix)
 }
-
 
 ## Solves the cached matrix, if found in cache then returns it
 ##                           if not found in cache then solve the inverse matrix then caches it
