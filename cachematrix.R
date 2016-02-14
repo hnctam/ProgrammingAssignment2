@@ -4,7 +4,7 @@
 ##      3. set_inverse_matrix() : Caches the inverse matrix
 ##
 ## @param p_matrix
-##              The input matrix
+##              The input matrix to be caching
 makeCacheMatrix <- function(p_matrix = matrix()) {
     v_inverse_matrix <- NULL
 
